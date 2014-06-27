@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<title> </title>
+
+	<% for (var i=0; i<theme.styles.length; i++) { %>
+                <link href="<%= theme.styles[i].href %>" rel="<%= theme.styles[i].rel %>" >
+        <% } %>
+
+	<style>
+	<!--
+		background: url("/public/img.png") noÂ-repeat center center fixed; 
+		-webkit-background-size: cover; 
+		-moz-background-size: cover; 
+		-o-background-size: cover; 
+		background-size: cover; 
+		height:100%;
+	-->
+		margin-height:200px;
+	</style>
+</head>
+
+<body>
+
+   <div class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                        <li> <a href="<%=rootns%>/login"> Already a member ? </a></li>
+                </ul>
+            </div>
+   </div>
+
+<div class="colÂ-sm-6 col-sm-offset-3">
+	<h2><span class="fa fa-lock" style="width:100px;margin-top:100px; margin-bottom:50px; text-align:center"></span> Welcome on Board </h2>
+</div>
+<div class="col-sm-6 col-sm-offset-3"> 
+	<form action="<%=rootns%>/signup" method="post" enctype="multipart/form-data">
+		<input type="text" name="email" placeholder="<%= hint %>">
+		<button type="submit" class="btn btn-lg btn-primary">submit</button> 
+	</form> 
+</div>
+
+<% for (var j=0; j<theme.scripts.length; j++) { %>
+        <script src="<%= theme.scripts[j].src %>" > </script>
+<% } %>
+
+
+</body>
+</html>

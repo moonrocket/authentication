@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<title> 404 </title>
+   	<% for (var i=0; i<theme.styles.length; i++) { %>
+                <link href="<%= theme.styles[i].href %>" rel="<%= theme.styles[i].rel %>" >
+        <% } %>
+
+	<style>
+		body { padding-top:80px; } 
+	</style>
+</head>
+
+<body>
+<div class="container"> 
+
+    <div class="col-sm-6 col-sm-offset-3">
+	<h1><span class="fa fa-sign-in"></span> 404 Error </h1>
+	
+	<div class="well">
+		<p> Ouups, the page you are looking for does not exist ! " </p> 
+	</div>
+
+ 	<p><a href="<%=rootns%>/"> Home </a></p>
+    </div>
+
+</div>
+
+<% for (var j=0; j<theme.scripts.length; j++) { %>
+        <script src="<%= theme.scripts[j].src %>" > </script>
+<% } %>
+</body>
+</html>
